@@ -12,4 +12,10 @@ class SitesController extends Controller
     {
         return view('welcome');
     }
+
+    public function about()
+    {
+        $name = 'jeremy';
+        return view('sites.about')->with('name', $name);
+    }
 }

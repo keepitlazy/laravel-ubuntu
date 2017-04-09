@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'SitesController@index');
-Route::get('/about', 'SitesController@about');
+Route::get('//about', 'SitesController@about');

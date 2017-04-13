@@ -15,7 +15,12 @@ class SitesController extends Controller
 
     public function about()
     {
-        $name = 'jeremy';
-        return view('sites.about')->with('name', $name);
+        $people = ['Taylor Otwell', 'Jeffray Way', 'Happy Peter'];
+        return view('sites.about', compact('people'));
+    }
+
+    public function contact()
+    {
+        return view();
     }
 }

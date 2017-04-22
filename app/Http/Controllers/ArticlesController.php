@@ -3,24 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::latest()->get();
         return view('articles.index',compact('articles'));
 }
 
     public function create()
     {
-
+        return view('articles.create');
     }
 
     public function store(Request $request)
     {
-
+        ##dd($request->all());
+        $input = $request->all();
+        $input['published_at'] = Carbon::now();
+        Article::create($input);
+        return redirect('/articles');
     }
 
     public function show($id)

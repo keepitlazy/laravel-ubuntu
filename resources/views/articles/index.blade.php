@@ -3,11 +3,17 @@
     <h1>Articles</h1>
     <hr>
     @foreach($articles as $article)
-        <h2><a href="{{ url('articles',$article->id) }}">{{ $article->title }}</a></h2>
-        <article>
-            <div class="body">
-            {{ $article->content }}
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                <div class="panel-heading"><a href="{{ url('articles',$article->id) }}">{{ $article->title }}</a></div>
+                    <div class="panel-body">
+                        <article>
+                            {{ $article->content }}
+                        </article>
+                    </div>
+                </div>
             </div>
-        </article>
+        </div>
     @endforeach
 @stop

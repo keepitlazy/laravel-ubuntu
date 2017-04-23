@@ -35,7 +35,7 @@
                             <li><a href="#">简历</a></li>
                             <li><a href="#">Jasper Report</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">分离的链接</a></li》
+                            <li><a href="#">分离的链接</a></li>
                         </ul>
                     </li>
                 </ul>

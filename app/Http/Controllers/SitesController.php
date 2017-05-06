@@ -10,17 +10,17 @@ class SitesController extends Controller
 
     public function index()
     {
-        return view('welcome');
+        return view('pages.welcome');
     }
 
     public function about()
     {
         $people = ['Taylor Otwell', 'Jeffray Way', 'Happy Peter'];
-        return view('sites.about', compact('people'));
+        return view('pages.about', compact('people'));
     }
 
     public function contact()
     {
-        return view();
+        return view('pages.contact');
     }
 }

@@ -13,7 +13,7 @@
 
 Route::get('/', 'SitesController@index');
 Route::get('/about/', 'SitesController@about');
-Route::get('contact','SitesController@contace');
+Route::get('/contact','SitesController@contact');
 
 Route::get('/articles','ArticlesController@index');
 Route::get('/articles/create','ArticlesController@create');
